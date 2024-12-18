@@ -7,6 +7,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -31,6 +32,49 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+}
+
+.imagenRedonda {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 200px; /* Ajusta el ancho según tu preferencia */
+	height: 200px; /* Ajusta la altura según tu preferencia */
+	border-radius: 50%; /* Hace que la imagen sea redonda */
+	opacity: 0.5; /* Establece la opacidad al 50% */
+  }
+
+.imagen-flotante {
+	position: fixed;
+	bottom: 20px;
+	right: 10px;
+	z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+	width: 85px;
+	animation: saltar 2s infinite;
+}
+.imagen-flotante2 {
+	position: fixed;
+	bottom: 100px;
+	right: 10px;
+	z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+	width: 95px;
+	animation: saltar 2s infinite;
+}
+.imagen-flotante3 {
+	position: fixed;
+	bottom: 210px;
+	right: 10px;
+	z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+	width: 85px;
+	animation: saltar 2s infinite;
+}
+@keyframes saltar {
+	0%, 100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px); /* Ajusta la altura del salto */
+	}
 }
 
 ol, ul {
@@ -164,8 +208,10 @@ input, select, textarea {
 	body, input, select, textarea {
 		color: #2C2C2C;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		/* font-family: "Cookie", cursive; */
 		font-size: 1rem;
-		font-weight: 300;
+		font-weight: 400;
+		font-style: normal;
 		letter-spacing: 0.0375em;
 		line-height: 2;
 	}
@@ -200,7 +246,8 @@ input, select, textarea {
 /* CAMBIO DE TEXTO */
 	h1, h2, h3, h4, h5, h6 {
 		color: #2C2C2C;
-		font-family: "Raleway", Helvetica, sans-serif;
+		/* font-family: "Raleway", Helvetica, sans-serif; */
+		font-family: "Cookie", cursive;
 		font-weight: 600;
 		letter-spacing: 0.175em;
 		line-height: 1.75;
@@ -214,13 +261,14 @@ input, select, textarea {
 		}
 
 	h1 {
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 5rem;
-		font-weight: 700;
-		letter-spacing: -0.05em;
+		font-size: 7rem;
+		/* font-weight: 700; */
+		letter-spacing: -0.01em;
 		line-height: 1.1;
 		margin: 0 0 1.5rem 0;
 		text-transform: none;
+		font-family: "Norican", cursive;
+		font-style: normal;
 	}
 
 	h2 {
@@ -2513,6 +2561,7 @@ input, select, textarea {
 			position: absolute;
 			top: 0;
 			width: 100%;
+			transition: opacity 1s ease-in-out;
 		}
 
 			.image.fill img {
@@ -2521,6 +2570,7 @@ input, select, textarea {
 				position: absolute;
 				top: 0;
 				width: 100%;
+				transition: opacity 1s ease-in-out;
 			}
 
 /* List */
